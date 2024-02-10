@@ -1,4 +1,4 @@
-# Vercel-Clone
+# Vercel Application Clone
 
 ### What is Vercel?
 

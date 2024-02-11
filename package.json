@@ -1,0 +1,23 @@
+{
+  "name": "vercel-clone",
+  "version": "1.0.0",
+  "description": "Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow. It enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and require no supervision, all with no configuration.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekkushwahaa/Vercel-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekkushwahaa/Vercel-Clone/issues"
+  },
+  "homepage": "https://github.com/abhishekkushwahaa/Vercel-Clone#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.511.0"
+  }
+}

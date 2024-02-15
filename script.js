@@ -9,10 +9,11 @@ const mime = require("mime-types");
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 
 const S3Client = new S3Client({
-  region: "",
+  region: "Asia-Pacific",
+  endpoint: process.env.S3_CLIENT_API_ENDPOINT,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
   },
 });
 
@@ -37,7 +38,7 @@ async function init() {
 
     for (const file of disFiles) {
       if (fs.lstatSync(file).isDirectory()) continue;
-
+      console.log(`Uploading ${file} to S3...`);
       const command = new PutObjectCommand({
         Bucket: process.env.BUCKET_NAME,
         Key: `__output/${PROJECT_ID}/${file}`,

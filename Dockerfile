@@ -16,5 +16,12 @@ RUN apt-get install -y git
 
 WORKDIR /Vercel-Clone
 COPY main.sh main.sh
+COPY script.js script.js
+COPY package*.json .
+
+RUN npm install
+
+RUN chmod +x main.sh
+RUN chmod +x script.js
 
 ENTRYPOINT [ "/Vercel-Clone/main.sh" ]
